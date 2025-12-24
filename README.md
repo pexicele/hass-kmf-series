@@ -15,11 +15,25 @@ This integration provides real-time monitoring of KM-F Series devices through Ho
 - **Total Capacity** - Maximum battery capacity in Ah
 - **Voltage** - System voltage (V)
 
+## Device
+
+<img src="https://raw.githubusercontent.com/pexicele/hass-kmf-series/main/assets/kmf-device.webp" alt="KM-F Series Device" width="300"/>
+
+The KM-F Series battery management system provides accurate monitoring and control of your power systems.
+
 ## Dashboard Preview
 
 The integration displays all sensors in a convenient card view on your Home Assistant dashboard:
 
-![KM-F Series Sensors](https://raw.githubusercontent.com/pexicele/hass-kmf-series/main/assets/km-f-sensors.jpg)
+<img src="https://raw.githubusercontent.com/pexicele/hass-kmf-series/main/assets/dashboard-preview.jpg" alt="KM-F Series Sensors Dashboard" width="400"/>
+
+**Real-time sensor data:**
+- Ah Remaining: 950.453 Ah
+- Current: -4.93 A (Charging)
+- SOC: 76.0%
+- Status: Discharging
+- Total Capacity: 1,250 Ah
+- Voltage: 51.38 V
 
 ## Installation
 
@@ -80,6 +94,15 @@ automation:
       service: notify.mobile_app
       data:
         message: "Battery SOC below 20%!"
+
+  - alias: "Stop charging when full"
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.kmf_series_soc
+      above: 95
+    action:
+      service: switch.turn_off
+      entity_id: switch.charger
 ```
 
 ## Troubleshooting
@@ -91,6 +114,7 @@ automation:
 **No sensor data?**
 - Verify device IP/hostname is correct
 - Check device is powered and connected
+- Ensure port 8899 is accessible
 - Review Home Assistant logs for errors
 
 **Need more details?**

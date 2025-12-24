@@ -1,0 +1,18 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure KM-F Series",
+        "description": "Set up your KM-F Series device integration"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "KM-F Series Options",
+        "description": "Configure polling interval and other settings"
+      }
+    }
+  }
+}

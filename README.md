@@ -48,7 +48,7 @@ When setting up the integration, you'll need to provide:
 
 - **Device Name** - Display name for the device
 - **Host** - IP address or hostname of the KM-F Series device
-- **Port** - Communication port (default: 8080)
+- **Port** - Communication port (default: 8899)
 
 ### Options
 

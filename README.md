@@ -17,23 +17,24 @@ This integration provides real-time monitoring of KM-F Series devices through Ho
 
 ## Device
 
-<img src="https://raw.githubusercontent.com/pexicele/hass-kmf-series/main/assets/kmf-device.webp" alt="KM-F Series Device" width="300"/>
+![KM-F Series Device](https://i.ebayimg.com/images/g/O-QAAOSwEEdnYmwc/s-l1600.webp)
 
-The KM-F Series battery management system provides accurate monitoring and control of your power systems.
+*KM-F Series battery management system for accurate power monitoring and control*
 
 ## Dashboard Preview
 
 The integration displays all sensors in a convenient card view on your Home Assistant dashboard:
 
-<img src="https://raw.githubusercontent.com/pexicele/hass-kmf-series/main/assets/dashboard-preview.jpg" alt="KM-F Series Sensors Dashboard" width="400"/>
+| Sensor | Value |
+|--------|-------|
+| Ah Remaining | 950.453 Ah |
+| Current | -4.93 A |
+| SOC | 76.0% |
+| Status | Discharging |
+| Total Capacity | 1,250 Ah |
+| Voltage | 51.38 V |
 
-**Real-time sensor data:**
-- Ah Remaining: 950.453 Ah
-- Current: -4.93 A (Charging)
-- SOC: 76.0%
-- Status: Discharging
-- Total Capacity: 1,250 Ah
-- Voltage: 51.38 V
+*Screenshot of Home Assistant KM-F Series sensor display*
 
 ## Installation
 

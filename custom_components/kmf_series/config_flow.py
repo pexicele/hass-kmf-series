@@ -22,7 +22,7 @@ class KMFSeriesConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         data_schema = vol.Schema({
             vol.Required("name", default="KM-F Series"): str,
             vol.Required("host", default=""): str,
-            vol.Optional("port", default=8080): int,
+            vol.Optional("port", default=8899): int,
         })
         
         return self.async_show_form(
